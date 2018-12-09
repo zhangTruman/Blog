@@ -4,9 +4,10 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from '../store/store';
 import {BrowserRouter as Router} from 'react-router-dom';
-import App from 'components/App/App';
+import App from '../pages/App/App';
 import getRouter from 'router/router';
 import '../../mock/mock';
+import './index.css';
 // 初始化
 renderWithHotReload(App);
 
@@ -15,8 +16,8 @@ if (MOCK) {
     require('../../mock/mock');
 }
 if(module.hot) {
-	module.hot.accept('components/App/App', () => {
-		const NextApp = require('components/App/App').default;
+	module.hot.accept('../pages/App/App', () => {
+		const NextApp = require('../pages/App/App').default;
 		renderWithHotReload(NextApp);
 	});
 }

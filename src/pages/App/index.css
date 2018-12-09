@@ -1,0 +1,18 @@
+.main {
+    width: 100%;
+    min-width: 900px;
+    display: flex;
+    position: relative;
+}
+
+.content {
+    width: 80%;
+    height: 626px;
+    /* background: blueviolet; */
+}
+
+.sider {
+    width: 20%;
+    height: 626px;
+    background: red;
+}

@@ -18,9 +18,15 @@ commonConfig = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
-            use: ['babel-loader?cacheDirectory=true'],
-            include: path.join(__dirname, 'src')
+            test: /\.(js|jsx|mjs)$/,
+            // use: ['babel-loader?cacheDirectory=true'],
+            include: path.join(__dirname, 'src'),
+            loader: require.resolve('babel-loader'),
+            options: {
+                plugins: [
+                    ['import',{libraryName: 'antd', style: 'css'}]
+                ]
+            }
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{

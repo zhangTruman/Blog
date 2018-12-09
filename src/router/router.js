@@ -7,9 +7,9 @@ import Bundle from './Bundle';
 
 // import Home from 'pages/Home/Home';
 import Home from 'bundle-loader?lazy&name=home!pages/Home/Home';
-import Page1 from 'bundle-loader?lazy&name=page1!pages/Page1/Page1';
-import Counter from 'bundle-loader?lazy&name=counter!pages/Counter/Counter';
-import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/UserInfo/UserInfo';
+import Note from 'bundle-loader?lazy&name=Note!pages/Note/Note';
+import Mark from 'bundle-loader?lazy&name=Mark!pages/Mark/Mark';
+import Resume from 'bundle-loader?lazy&name=Resume!pages/Resume/Resume';
 import NotFound from 'bundle-loader?lazy&name=notFound!pages/NotFound/NotFound';
 import Loading from 'components/Loading/Loading/';
 
@@ -26,9 +26,9 @@ export default () => (
     <div>
         <Switch>
             <Route exact path="/" component={createComponent(Home)} />
-            <Route   path="/page1" component={createComponent(Page1)} />
-            <Route   path="/counter" component={createComponent(Counter)} />
-            <Route   path="/userinfo" component={createComponent(UserInfo)} />
+            <Route   path="/note" component={createComponent(Note)} />
+            <Route   path="/mark" component={createComponent(Mark)} />
+            <Route   path="/resume" component={createComponent(Resume)} />
             <Route component={createComponent(NotFound)}/>
         </Switch>
     </div>
